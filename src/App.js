@@ -6,6 +6,7 @@ import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 import VideoPlayer from './components/VideoPlayer';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 const YT_API = 'AIzaSyDpcSjSyVSO3rMvvJt3lEQ7Jk8tMHeqcOQ';
 
@@ -41,6 +42,7 @@ class App extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <SearchBar onChange={(searchTerm) => {this.videoSearch(searchTerm)}} />
             </div>
+            <hr/>
             <div className="row">
               <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                 <VideoPlayer video={this.state.selectedVideo} />
@@ -54,6 +56,8 @@ class App extends Component {
                 />
               </div>
             </div>
+            <hr/>
+            <Footer/>
           </div>
 
         </div>
